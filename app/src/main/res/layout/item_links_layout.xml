@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
+    app:cardCornerRadius="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/linkImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@id/linkTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linkTextView"
+            app:layout_constraintEnd_toStartOf="@+id/clicksLayout"
+            app:layout_constraintStart_toEndOf="@+id/linkImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0">
+
+            <TextView
+                android:id="@+id/titleNameTextView"
+                style="@style/sub_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Sample Link Name" />
+
+            <TextView
+                android:id="@+id/dateTextView"
+                style="@style/sub_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="22 Aug 2022"
+                android:textColor="@color/textColorLight"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clicksLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linkTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/clicksTextView"
+                style="@style/sub_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2323"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clicks"
+                android:textColor="@color/textColorLight"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/linkTextView"
+            style="@style/sub_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#e8f1ff"
+            android:drawableEnd="@drawable/content_copy_fill0_wght400_grad0_opsz24"
+            android:padding="10dp"
+            android:text="https://samplelink.oia.bio/asdf"
+            android:textSize="14sp"
+            android:drawableTint="@color/textColorLight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/transparentButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/linkTextView"
+            app:layout_constraintEnd_toEndOf="@+id/linkTextView"
+            app:layout_constraintStart_toStartOf="@+id/linkTextView"
+            app:layout_constraintTop_toTopOf="@+id/linkTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
